@@ -7,7 +7,7 @@ from smartystreets import Client
 
 
 class CheckoutWebsite(WebsiteSale):
-    #inherit class amd overide address method
+    # inherit class amd overide address method
 
     def checkout_form_validate(self, mode, all_form_values, data):
         """ To override Shipping Address submit button controller, inherit from its class
@@ -28,24 +28,25 @@ class CheckoutWebsite(WebsiteSale):
         # check if there api credential , make api client , send data and receive response
         if auth_id and auth_token:
             client = Client(auth_id, auth_token, standardize=True, invalid=False,
-            logging=False)
+                            logging=False)
             address = client.street_address({
-                    'input_id': data.get('partner_id'),
-                    'city': data.get('city'),
-                    'zipcode': data.get('zip'),
-                })
+                'input_id': data.get('partner_id'),
+                'city': data.get('city'),
+                'street': data.get('street'),
+                'state': data.get('state'),
+                'zipcode': data.get('zip'),
+            })
 
             if address is None:
-               error["city"] = 'error'
-               error["zip"] = 'error'
-               error_message.append(_('Please check City and zip code!'))
+                if address.city != data.get('city') and address.zipcode != data.get('zip'):
+                    error_message.append(_('Please check City and zip code!'))
 
             elif address is not None:
                 error_message.append(_('Address is seem Valid'))
+
 
 
         else:
             raise ValidationError(_("you Must Enter Auth ID and Token at Configuration Fist"))
 
         return res
-
