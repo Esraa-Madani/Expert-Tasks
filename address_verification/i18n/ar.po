@@ -1,0 +1,56 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* address_verification
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-30 17:23+0000\n"
+"PO-Revision-Date: 2020-12-30 19:52+0200\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Generator: Poedit 2.3\n"
+"Last-Translator: \n"
+"Language: ar\n"
+
+#. module: address_verification
+#: code:addons/address_verification/controllers/controllers.py:0
+#, python-format
+msgid "Address is seem Valid"
+msgstr "العنوان يبدو صحيحا"
+
+#. module: address_verification
+#: model:ir.model.fields,field_description:address_verification.field_res_config_settings__auth_id
+msgid "Auth Id"
+msgstr "معرف المصادقه"
+
+#. module: address_verification
+#: model:ir.model.fields,field_description:address_verification.field_res_config_settings__auth_token
+msgid "Auth Token"
+msgstr "معرف الرمز"
+
+#. module: address_verification
+#: model:ir.model,name:address_verification.model_res_config_settings
+msgid "Config Settings"
+msgstr "الاعدادات"
+
+#. module: address_verification
+#: code:addons/address_verification/controllers/controllers.py:0
+#, python-format
+msgid "Please check City and zip code!"
+msgstr "من فضلك اعد ادخال المدينه و الكود"
+
+#. module: address_verification
+#: model_terms:ir.ui.view,arch_db:address_verification.smarty_web_setting_inherit
+msgid "SmartyStreets Authentication"
+msgstr "SmartyStreets"
+
+#. module: address_verification
+#: code:addons/address_verification/controllers/controllers.py:0
+#, python-format
+msgid "you Must Enter Auth ID and Token at Configuration Fist"
+msgstr "يجب عليك اولا ادخال معرف المصادقه و معرف الرمز في اعدادات الموقع"
